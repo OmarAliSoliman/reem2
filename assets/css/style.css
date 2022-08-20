@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap");
 /* Constant styles  */
+:root {
+  --animate-delay: 0.3s;
+}
+
 @font-face {
   font-family: ghm;
   src: url("../fonts/Gotham-Medium.otf");
@@ -138,6 +142,108 @@ ul {
   color: #1c5147;
 }
 
+.splash_parent {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: #1c5147;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 999;
+}
+
+.splash_parent .wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 142px;
+  height: 40px;
+  margin: -20px 0 0 -71px;
+  -webkit-filter: contrast(30);
+          filter: contrast(30);
+}
+
+.splash_parent .dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 5px;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  background: #fff;
+  border-radius: 50%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-animation: dot 2.8s infinite;
+          animation: dot 2.8s infinite;
+}
+
+.splash_parent .dots {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  -webkit-animation: dots 2.8s infinite;
+          animation: dots 2.8s infinite;
+}
+
+.splash_parent span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  background: #fff;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes dot {
+  50% {
+    -webkit-transform: translateX(96px);
+            transform: translateX(96px);
+  }
+}
+
+@keyframes dot {
+  50% {
+    -webkit-transform: translateX(96px);
+            transform: translateX(96px);
+  }
+}
+
+@-webkit-keyframes dots {
+  50% {
+    -webkit-transform: translateX(-31px);
+            transform: translateX(-31px);
+  }
+}
+
+@keyframes dots {
+  50% {
+    -webkit-transform: translateX(-31px);
+            transform: translateX(-31px);
+  }
+}
+
+.splachDisplayNone {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
 .sideNav {
   position: fixed;
   width: 300px;
@@ -148,8 +254,8 @@ ul {
   background-color: #1c5147;
   padding: 40px 20px;
   left: -100%;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .sideNav .logo {
@@ -257,10 +363,11 @@ ul {
 }
 
 .main_content .content_wrapper .main_nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 99;
+  overflow: hidden;
 }
 
 .main_content .content_wrapper .main_nav .wrapper {
@@ -915,9 +1022,12 @@ ul {
   .main_content .content_wrapper .site_footer .list {
     width: 100%;
   }
+  .main_content .content_wrapper .center_of_every .center_wrapper .center_img .card_img {
+    height: 500px;
+  }
 }
 
-@media (max-width: 524px) {
+@media (max-width: 524px) and (-webkit-min-device-pixel-ratio: 1.1) {
   html {
     font-size: 13px;
   }
@@ -1020,7 +1130,7 @@ ul {
     font-size: 1.3rem;
   }
   .main_content .content_wrapper .peak_living .peak_box p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 

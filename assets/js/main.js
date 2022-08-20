@@ -37,6 +37,13 @@ $(document).ready(function () {
 
 
 
+  $(window).on('load', function() {
+    // code here
+    setTimeout(()=>{
+      $(".splash_parent").addClass("splachDisplayNone");
+    }, 500)
+   });
+
 
  
 
