@@ -893,7 +893,7 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 70%;
+  width: 80%;
   margin: auto;
   position: relative;
   z-index: 3;
@@ -991,6 +991,26 @@ ul {
 .main_content .content_wrapper .social .social_wrapper ul li a:hover {
   background-color: #fff;
   color: #000;
+}
+
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1024px;
+  }
 }
 
 @media (max-width: 1024px) {
