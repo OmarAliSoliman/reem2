@@ -46,15 +46,7 @@ $(document).ready(function () {
 
 
 
-  //  if ($(".bridgethumbnail").length) {
-  //   var image = document.getElementsByClassName('bridgethumbnail');
-  //   new simpleParallax(image, {
-  //     scale: 1.1,
-  //     transition: 'cubic-bezier(0,0,0,1)',
-  //     delay: 1.6,
-  //     orientation: 'right',
-  //   });
-  // }
+   
 
  
 
